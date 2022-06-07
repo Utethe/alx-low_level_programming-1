@@ -12,7 +12,7 @@ int main(void)
 			 'b', 'c', 'd', 'e', 'f', '\0'};
 	int n;
 
-	for (n = 0; n <= 17; ++n)
+	for (n = 0; n <= 16; ++n)
 	{
 		putchar(hexs[n]);
 	}
