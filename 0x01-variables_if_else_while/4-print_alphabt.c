@@ -3,7 +3,7 @@
 /**
  * main - Entry point
  *
- * Description: prints the whole alphabets in loower case
+ * Description: prints the whole alphabets in lower case except q and e
  * Return:  0
 */
 int main(void)
@@ -12,6 +12,10 @@ int main(void)
 
 	for (l = 'a'; l <= 'z'; ++l)
 	{
+		if (l == 'q' || l == 'e')
+		{
+			continue;
+		}
 		putchar(l);
 	}
 	putchar('\n');

@@ -3,16 +3,16 @@
 /**
  * main - Entry point
  *
- * Description: prints the whole alphabets in loower case
+ * Description: prints the single digits in base 10
  * Return:  0
 */
 int main(void)
 {
-	char l;
+	int n;
 
-	for (l = 'a'; l <= 'z'; ++l)
+	for (n = '0'; n <= '9'; ++n)
 	{
-		putchar(l);
+		putchar(n);
 	}
 	putchar('\n');
 	return (0);
