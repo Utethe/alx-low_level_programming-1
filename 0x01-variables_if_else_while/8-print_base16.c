@@ -12,10 +12,10 @@ int main(void)
 			 'b', 'c', 'd', 'e', 'f', '\0'};
 	int n;
 
-	for (n = 0; n <= 16; ++n)
+	for (n = 0; n <= 15; ++n)
 	{
 		putchar(hexs[n]);
 	}
-	// putchar('\n');
+	putchar('\n');
 	return (0);
 }
