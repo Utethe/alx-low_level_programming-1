@@ -14,6 +14,7 @@ int main(void)
 	for (n = 0; n <= 9; ++n)
 	{
 		int k;
+
 		for (k = st; k <= 9; ++k)
 		{
 			putchar(n + '0');
