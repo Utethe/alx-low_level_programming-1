@@ -1,4 +1,3 @@
-#include <stdlib.h>
 #include "main.h"
 
 /**
@@ -8,10 +7,10 @@
  */
 int print_last_digit(int c)
 {
-	int l;
+	unsigned int l;
 
-	c = (c < 0) ? -((unsigned int)c) : (unsigned int)c;
-	l = abs(c) % 10;
+	unsigned int b = (unsigned int)c;
+	l = b % 10;
 	_putchar(l + '0');
 	return (l);
 }
