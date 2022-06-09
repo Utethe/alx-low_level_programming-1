@@ -9,67 +9,50 @@
  */
 void print_to_98(int n)
 {
-	if (n == 98)
-	{
-		_putchar(n / 10 + '0');
-		_putchar(n % 10 + '0');
-		_putchar('\n');
-	}
-	else if (n < 98)
-	{
-		int i, f, k;
+	int i, f, k;
 
-		for (i = n; i <= 98; i++)
-		{
-			k = i;
-			if (i < 0)
-			{
-				_putchar('-');
-				k = abs(i);
-			}
-			f = k / 10;
-			if (f / 10)
-			{
-				_putchar(f / 10 + '0');
-			}
-			if (k / 10)
-			{
-				_putchar(f % 10 + '0');
-				_putchar(k % 10 + '0');
-			}
-			else
-			{
-				_putchar(k + '0');
-			}
-			if (i > 0 && k == 98)
-			{
-				continue;
-			}
-			_putchar(',');
-			_putchar(' ');
-		}
-		_putchar('\n');
-	}
-	else
+	i = n;
+	while (i != 98)
 	{
-		int d, e;
-
-		for (d = n; d >= 98; d--)
+		k = i;
+		if (i < 0)
 		{
-			e = d / 10;
-			if (e / 10)
-			{
-				_putchar(e / 10 + '0');
-			}
-			_putchar(e % 10 + '0');
-			_putchar(d % 10 + '0');
-			if (d == 98)
-			{
-				continue;
-			}
-			_putchar(',');
-			_putchar(' ');
+			_putchar('-');
+			k = abs(i);
 		}
-		_putchar('\n');
+		f = k / 10;
+		if (f / 10)
+		{
+			_putchar(f / 10 + '0');
+		}
+		if (f)
+		{
+			_putchar(f % 10 + '0');
+			_putchar(k % 10 + '0');
+		}
+		else
+		{
+			_putchar(k + '0');
+		}
+		if (i > 0 && k == 98)
+		{
+			break;
+		}
+		_putchar(',');
+		_putchar(' ');
+		if (n > 98)
+		{
+			i--;
+		}
+		else
+		{
+			i++;
+		}
 	}
+	if (i == 98)
+	{
+		_putchar(i / 10 + '0');
+		_putchar(i % 10 + '0');
+	}
+	_putchar('\n');
 }
