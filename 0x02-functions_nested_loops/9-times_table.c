@@ -17,12 +17,15 @@ void times_table(void)
 			{
 				_putchar(p / 10 + '0');
 			}
+			else if (k == 0)
+			{
+				 
+			}
 			else
 			{
 				_putchar(' ');
 			}
-			p = p % 10;
-			_putchar(p + '0');
+			_putchar(p % 10 + '0');
 			if (k == 9)
 			{
 				continue;
