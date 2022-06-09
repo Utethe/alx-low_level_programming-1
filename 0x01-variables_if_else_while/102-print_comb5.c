@@ -20,20 +20,23 @@ int main(void)
 				{
 					int nk = n * 10 + k;
 					int li = l * 10 + i;
-					if (nk < li)
+
+					if (nk >= li)
 					{
-						putchar(n + '0');
-						putchar(k + '0');
-						putchar(32);
-						putchar(l + '0');
-						putchar(i + '0');
-						if (n == 9 && k == 8 && l == 9 && i == 9)
-						{
-							continue;
-						}
-						putchar(44);
-						putchar(32);
+						continue;
 					}
+
+					putchar(n + '0');
+					putchar(k + '0');
+					putchar(32);
+					putchar(l + '0');
+					putchar(i + '0');
+					if (n == 9 && k == 8 && l == 9 && i == 9)
+					{
+						continue;
+					}
+					putchar(44);
+					putchar(32);
 				}
 			}
 		}
