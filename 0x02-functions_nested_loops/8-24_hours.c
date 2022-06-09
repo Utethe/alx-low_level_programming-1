@@ -1,12 +1,31 @@
-#include <stdlib.h>
 #include "main.h"
 
 /**
- * jack_bauer - prints every minute of the day of Jack Bauer, 
+ * jack_bauer - prints every minute of the day of Jack Bauer,
  * starting from 00:00 to 23:59
  * Return: last digit c
  */
 void jack_bauer(void)
 {
-	
+	int n, k, l, i;
+
+	for (n = 0; n <= 2; n++)
+	{
+		for (k = 0; k <= 3; k++)
+		{
+			for (l = 0; l <= 5; l++)
+			{
+				for (i = 0; i <= 9; i++)
+				{
+					_putchar(n + '0');
+					_putchar(k + '0');
+					_putchar(':');
+					_putchar(l + '0');
+					_putchar(i + '0');
+					_putchar(10);
+				}
+			}
+		}
+	}
+	_putchar(10);
 }
