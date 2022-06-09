@@ -6,23 +6,18 @@
  */
 void printm(long n)
 {
-	// If number is smaller than 0, put a - sign
-	// and change number to positive
-	if (n < 0) {
+	if (n < 0)
+	{
 		_putchar('-');
 		n = -n;
 	}
-
-	// Remove the last digit and recur
-	if (n/10)
-		printm(n/10);
-
-	// Print the last digit
-	_putchar(n%10 + '0');
+	if (n / 10)
+		printm(n / 10);
+	_putchar(n % 10 + '0');
 }
 
 /**
- * times_table - prints the n times table, starting with 0.
+ * print_times_table - prints the n times table, starting with 0.
  * @n: times table stop
  * Return: void
  */
@@ -36,19 +31,6 @@ void print_times_table(int n)
 		{
 			p = i * k;
 			printm(p);
-			// if (p / 10)
-			// {
-			// 	_putchar(p / 10 + '0');
-			// }
-			// else if (k != 0)
-			// {
-			// 	_putchar(' ');
-			// }
-			// _putchar(p % 10 + '0');
-			// if (k == 9)
-			// {
-			// 	continue;
-			// }
 			_putchar(',');
 			_putchar(' ');
 			_putchar(' ');
