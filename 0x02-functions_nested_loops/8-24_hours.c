@@ -8,8 +8,8 @@
 void jack_bauer(void)
 {
 	int n, k, l, i, x;
-	x = 1;
 
+	x = 1;
 	for (n = 0; n <= 2; n++)
 	{
 		for (k = 0; k <= 9; k++)
