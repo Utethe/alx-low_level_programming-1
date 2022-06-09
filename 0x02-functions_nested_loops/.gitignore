@@ -9,5 +9,4 @@
 
 # ignore specific files
 _putchar.c
-main.h
 main.c
