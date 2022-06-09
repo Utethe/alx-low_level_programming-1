@@ -12,7 +12,6 @@ int print_last_digit(int c)
 	int b;
 
 	b = abs(c);
-	b = (b < 0) ? (unsigned int)b : b;
 	l = b % 10;
 	l = abs(l);
 	_putchar(l + '0');
