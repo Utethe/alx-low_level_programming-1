@@ -21,21 +21,18 @@ void print_to_98(int n)
 
 		for (i = n; i <= 98; i++)
 		{
+			k = i;
 			if (i < 0)
 			{
 				_putchar('-');
 				k = abs(i);
 			}
-			else
-			{
-				k = i;
-			}
 			f = k / 10;
-			if (f / 10) 
+			if (f / 10)
 			{
 				_putchar(f / 10 + '0');
 			}
-			if (k / 10) 
+			if (k / 10)
 			{
 				_putchar(f % 10 + '0');
 				_putchar(k % 10 + '0');
@@ -44,7 +41,7 @@ void print_to_98(int n)
 			{
 				_putchar(k + '0');
 			}
-			if (k == 98)
+			if (i > 0 && k == 98)
 			{
 				continue;
 			}
@@ -60,7 +57,7 @@ void print_to_98(int n)
 		for (d = n; d >= 98; d--)
 		{
 			e = d / 10;
-			if (e / 10) 
+			if (e / 10)
 			{
 				_putchar(e / 10 + '0');
 			}
