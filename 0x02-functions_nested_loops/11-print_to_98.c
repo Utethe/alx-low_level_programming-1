@@ -22,32 +22,22 @@ void print_to_98(int n)
 		}
 		f = k / 10;
 		if (f / 10)
-		{
 			_putchar(f / 10 + '0');
-		}
 		if (f)
 		{
 			_putchar(f % 10 + '0');
 			_putchar(k % 10 + '0');
 		}
 		else
-		{
 			_putchar(k + '0');
-		}
 		if (i > 0 && k == 98)
-		{
 			break;
-		}
 		_putchar(',');
 		_putchar(' ');
 		if (n > 98)
-		{
 			i--;
-		}
 		else
-		{
 			i++;
-		}
 	}
 	if (i == 98)
 	{
