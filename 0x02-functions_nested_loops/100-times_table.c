@@ -29,7 +29,7 @@ int countn(long n)
 	{
 		return (1);
 	}
-	return floor(log10(abs(n))) + 1;
+	return (floor(log10(abs(n))) + 1);
 }
 
 /**
@@ -40,6 +40,11 @@ int countn(long n)
 void print_times_table(int n)
 {
 	int i, k, p, nd, l;
+
+	if (n > 15 || n < 0)
+	{
+		return;
+	}
 	if (n == 0)
 	{
 		printm(n);
