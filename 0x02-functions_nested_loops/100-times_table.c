@@ -1,4 +1,6 @@
+#include <stdlib.h>
 #include "main.h"
+#include <math.h>
 
 /**
  * printm - helper function, print integer using _putchar
@@ -17,23 +19,55 @@ void printm(long n)
 }
 
 /**
+ * countn - helper function, counts the number of digits in a number
+ * @n: number to count
+ * Return: number of digits in n
+ */
+int countn(long n)
+{
+	if (n >= 0 && n <= 9)
+	{
+		return (1);
+	}
+	return floor(log10(abs(n))) + 1;
+}
+
+/**
  * print_times_table - prints the n times table, starting with 0.
  * @n: times table stop
  * Return: void
  */
 void print_times_table(int n)
 {
-	int i, k, p;
-
+	int i, k, p, nd, l;
+	if (n == 0)
+	{
+		printm(n);
+		return;
+	}
 	for (i = 0; i <= n; i++)
 	{
 		for (k = 0; k <= n; k++)
 		{
 			p = i * k;
-			printm(p);
-			_putchar(',');
-			_putchar(' ');
-			_putchar(' ');
+			if (k == 0)
+			{
+				printm(p);
+				_putchar(',');
+			}
+			else
+			{
+				nd = countn(p);
+				for (l = 1; l <= 4 - nd; l++)
+				{
+					_putchar(' ');
+				}
+				printm(p);
+				if (k != n)
+				{
+					_putchar(',');
+				}
+			}
 		}
 		_putchar('\n');
 	}
