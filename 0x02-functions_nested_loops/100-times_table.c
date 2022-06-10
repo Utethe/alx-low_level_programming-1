@@ -1,6 +1,5 @@
 #include <stdlib.h>
 #include "main.h"
-#include <math.h>
 
 /**
  * printm - helper function, print integer using _putchar
@@ -25,11 +24,19 @@ void printm(long n)
  */
 int countn(long n)
 {
+	int l;
+
 	if (n >= 0 && n <= 9)
 	{
 		return (1);
 	}
-	return (floor(log10(abs(n))) + 1);
+	l = !n;
+	while (n)
+	{
+		l++;
+		n /= 10;
+	}
+	return (l);
 }
 
 /**
