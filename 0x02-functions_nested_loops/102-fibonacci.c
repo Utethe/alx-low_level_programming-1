@@ -14,7 +14,14 @@ int main(void)
 	for (i = 3; i <= 50; i++)
 	{
 		nx = n + m;
-		printf("%lu, ", nx);
+		if (i == 50)
+		{
+			printf("%lu", nx);
+		}
+		else
+		{
+			printf("%lu, ", nx);
+		}
 		n = m;
 		m = nx;
 	}
