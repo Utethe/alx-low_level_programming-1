@@ -6,7 +6,7 @@
  */
 int main(void)
 {
-	long unsigned int n, m, i, nx;
+	unsigned long int n, m, i, nx;
 
 	n = 1;
 	m = 2;
