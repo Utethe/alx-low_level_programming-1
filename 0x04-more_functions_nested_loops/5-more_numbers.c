@@ -25,10 +25,12 @@ void more_numbers(void)
 {
 	int i, n;
 
-	for (i = 0; i <= 14; i++)
+	for (i = 0; i <= 10; i++)
 	{
-		n = i * 10;
-		printm(n);
+		for (n = 0; n <= 14; n++)
+		{
+			printm(n);
+		}
+		_putchar('\n');
 	}
-	_putchar('\n');
 }
