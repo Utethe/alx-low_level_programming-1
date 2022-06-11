@@ -2,20 +2,31 @@
 
 /**
  * print_diagonal - draws a diagonal line on the terminal
+ * @n: length of the diagonal
  * Return: 0
  */
 void print_diagonal(int n)
 {
 	int i, k;
 
-	for (i = 0; i < n; i++)
+	if (n <= 0)
 	{
-		for (k = 0; k < n; i++)
-		{
-			/* code */
-		}
-		
-		_putchar('\\');
+		_putchar('\n');
 	}
-	_putchar('\n');
+	for (i = 1; i <= n; i++)
+	{
+		for (k = 1; k <= i; k++)
+		{
+			if (k != 1)
+			{
+				_putchar(' ');
+			}
+			if (i == k)
+			{
+				_putchar('\\');
+				_putchar('\n');
+				break;
+			}
+		}
+	}
 }
