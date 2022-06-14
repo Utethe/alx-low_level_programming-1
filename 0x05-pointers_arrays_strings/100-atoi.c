@@ -22,7 +22,7 @@ int _atoi(char *s)
 		return (v);
 	}
 
-	for (i = 0; i < strlen(s); i++)
+	for (i = 0; i < (int)strlen(s); i++)
 	{
 		if (s[i] == 43)
 		{
