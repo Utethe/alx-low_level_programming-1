@@ -1,17 +1,20 @@
-#include <ctype.h>
+#include <string.h>
 #include <stdio.h>
 /**
- * cap_string - capitalizes all words of a string.
+ * leet - capitalizes all words of a string.
  * @str: strings
  * Return: pointer to str
  */
-char *cap_string(char *str)
+char *leet(char *str)
 {
 	char ch;
 	int nx;
 	int a = 0;
 
-	*(str + a) = toupper(str[a]);
+	char a[] = {'a', 'e', 'o', 't', 'l'};
+	char b[] = {'A', 'E', 'O', 'T', 'L'};
+	char c[] = {4, 3, 0, 7, 1};
+	char op = strstr(, array('1','3','7'), str);
 	while (str[a])
 	{
 		switch (str[a])
