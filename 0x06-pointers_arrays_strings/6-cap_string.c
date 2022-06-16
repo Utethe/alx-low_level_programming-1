@@ -16,7 +16,6 @@ char *cap_string(char *str)
 		switch (str[a])
 		{
 		case 9:
-			*(str + a) = 32;
 		case 32:
 		case 10:
 		case 44:
