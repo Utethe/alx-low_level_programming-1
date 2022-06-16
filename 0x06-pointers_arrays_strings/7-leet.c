@@ -1,46 +1,27 @@
 #include <string.h>
 #include <stdio.h>
 /**
- * leet - capitalizes all words of a string.
+ * leet - encodes a string into 1337.
  * @str: strings
  * Return: pointer to str
  */
 char *leet(char *str)
 {
 	char ch;
-	int nx;
+	int nx, i;
 	int a = 0;
+	char z[] = {'a', 'e', 'o', 't', 'l'};
+	char d[] = {52, 51, 48, 55, 49};
 
-	char a[] = {'a', 'e', 'o', 't', 'l'};
-	char b[] = {'A', 'E', 'O', 'T', 'L'};
-	char c[] = {4, 3, 0, 7, 1};
-	char op = strstr(, array('1','3','7'), str);
-	while (str[a])
+	for (a = 0; a < strlen(str); a++)
 	{
-		switch (str[a])
+		for (i = 0; i < 5; i++)
 		{
-		case 9:
-		case 32:
-		case 10:
-		case 44:
-		case 59:
-		case 46:
-		case 33:
-		case 63:
-		case 34:
-		case 40:
-		case 41:
-		case 123:
-		case 125:
-			nx = a + 1;
-			ch = str[nx];
-			if (isalpha(ch))
+			if (strncasecmp(&str[a], &z[i], 1) == 0)
 			{
-				*(str + nx) = toupper(ch);
+				*(str + a) = d[i];
 			}
-			break;
 		}
-		a++;
 	}
 	return (str);
 }
