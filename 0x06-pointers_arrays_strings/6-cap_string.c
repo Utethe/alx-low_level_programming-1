@@ -30,9 +30,10 @@ char *cap_string(char *str)
 		case 125:
 			nx = a + 1;
 			ch = str[nx];
-			*(str + nx) = toupper(ch);
-			break;
-		default:
+			if (isalpha(ch))
+			{
+				*(str + nx) = toupper(ch);
+			}
 			break;
 		}
 		a++;
