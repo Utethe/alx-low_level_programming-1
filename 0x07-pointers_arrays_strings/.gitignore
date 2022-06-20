@@ -6,6 +6,7 @@
 
 # Unignore all dirs
 !*/
+!101-crackme_password
 
 # ignore specific files
 _putchar.c
