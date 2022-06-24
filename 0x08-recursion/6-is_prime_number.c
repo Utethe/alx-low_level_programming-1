@@ -24,7 +24,8 @@ int is_prime_number(int n)
 {
 	if (n <= 1)
 		return (0);
-	int i = 2;
+	int i;
 
+	i = 2;
 	return (my_primer(n, i));
 }
