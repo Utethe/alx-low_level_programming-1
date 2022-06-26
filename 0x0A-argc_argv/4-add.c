@@ -26,8 +26,8 @@ int main(int argc, char *argv[])
 		k =  strtol(argv[i], &p, 10);
 		if (k != 0 && *p != 0)
 		{
-			z = atof(argv[i]);
-			sm += z;
+			printf("%s\n", "Error");
+			return (1);
 		}
 		if (k != 0 || (k == 0 && *p == 0))
 		{
