@@ -28,7 +28,6 @@ int main(int argc, char *argv[])
 	r = 0;
 	while (i < 5 && n > 0)
 	{
-		j++;
 		if (n >= cn[i])
 		{
 			n -= cn[i];
