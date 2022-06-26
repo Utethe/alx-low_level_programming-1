@@ -13,7 +13,6 @@ int main(int argc, char *argv[])
 	int i, sm;
 	long int k;
 	char *p;
-	double z;
 
 	if (!argv[1])
 	{
