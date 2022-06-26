@@ -13,6 +13,7 @@ int main(int argc, char *argv[])
 	int i, sm;
 	long int k;
 	char *p;
+	double z;
 
 	if (!argv[1])
 	{
@@ -23,6 +24,11 @@ int main(int argc, char *argv[])
 	for (i = 1; i < argc; i++)
 	{
 		k =  strtol(argv[i], &p, 10);
+		if (k != 0 && *p != 0)
+		{
+			z = atof(argv[i]);
+			sm += z;
+		}
 		if (k != 0 || (k == 0 && *p == 0))
 		{
 			sm += k;
