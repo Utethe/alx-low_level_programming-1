@@ -1,35 +1,38 @@
 #include <stdio.h>
 #include <string.h>
 /**
- * my_palindrome - checks if a string is palindrome
+ * my_wildcmp - compares two strings
  * @s1: string to check
  * @s2: string to check
- * @i: small index
- * @li: big index
- * Return: 1 if n is a prime number, else 0
+ * @i: s1 index
+ * @j: s2 index
+ * Return: 1 if the strings can be considered identical, otherwise return 0
  */
-int my_palindrome(char *s, int i, int li)
+int my_wildcmp(char *s1, char *s2, int i, int j)
 {
-	if (i >= li)
+	int l;
+
+	l = strlen(s1) > strlen(s2)? strlen(s1) : strlen(s2);
+	if (s1[i] == s2[j])
 		return (1);
-	if (s[i] != s[li])
+	if (s1[i] != s2[j])
 		return (0);
-	return (my_palindrome(s, i + 1, li - 1));
+	return (my_wildcmp(s1, s2, i + 1, j - 1));
 }
 
 /**
- * is_palindrome - compares two strings and returns
+ * is_palindrome - compares two strings
  * @s1: string to check
  * @s2: string to check
  * Return: 1 if the strings can be considered identical, otherwise return 0
  */
 int wildcmp(char *s1, char *s2)
 {
-	int i, li;
+	int i, j;
 
 	if (s1 == s2)
 		return (1);
-	// i = 0;
-	// li = strlen(s) - 1;
-	// return (my_palindrome(s, i, li));
+	i = 0;
+	j = 0;
+	return (my_wildcmp(s1, s2, i, j));
 }
