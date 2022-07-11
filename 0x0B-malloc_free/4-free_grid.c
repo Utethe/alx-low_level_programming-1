@@ -8,7 +8,7 @@
  * @height: height of the 2D array
  * Return: a pointer a 2D array of int
  */
-int **alloc_grid(int width, int height)
+void free_grid(int **grid, int height)
 {
 	int **cr;
 	int i;
@@ -20,10 +20,7 @@ int **alloc_grid(int width, int height)
 	{
 		cr[i] = (int *)calloc(width, sizeof(int));
 		if (cr[i] == NULL)
-		{
-			free(cr);
 			return (NULL);
-		}
 	}
 	return (cr);
 }
