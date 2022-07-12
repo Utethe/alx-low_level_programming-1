@@ -8,24 +8,37 @@
  * @height: height of the 2D array
  * Return: a pointer a 2D array of integer
  */
-int **alloc_grid(int height, int width)
+int **alloc_grid(int width, int height)
 {
-	int **cr;
-	int i, k;
+	int **arr;
+	int i, j;
 
-	if (width <= 0 || height <= 0)
+	if (height <= 0 || width <= 0)
 		return (NULL);
-	cr = (int **)malloc(height * sizeof(int *));
+
+	arr = (int **) malloc(sizeof(int *) * height);
+
+	if (arr == NULL)
+		return (NULL);
+
 	for (i = 0; i < height; i++)
 	{
-		cr[i] = (int *)calloc(width, sizeof(int));
-		if (cr[i] == NULL)
+		arr[i] = (int *) malloc(sizeof(int) * width);
+		if (arr[i] == NULL)
 		{
-			for (k = 0; k <= i; k++)
-				free(cr[k]);
-			free(cr);
+			free(arr);
+			for (j = 0; j <= i; j++)
+				free(arr[j]);
 			return (NULL);
 		}
 	}
-	return (cr);
+
+	for (i = 0; i < height; i++)
+	{
+		for (j = 0; j < width; j++)
+		{
+			arr[i][j] = 0;
+		}
+	}
+	return (arr);
 }
