@@ -2,7 +2,7 @@
 #include <string.h>
 
 /**
- * alloc_grid - frees the memory allocated to a 2D array
+ * free_grid - frees the memory allocated to a 2D array
  * @grid: grid of the 2D array
  * @height: height of the 2D array
  * Return: 0
