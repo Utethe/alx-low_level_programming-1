@@ -3,12 +3,12 @@
 #include <stdio.h>
 
 /**
- * argstostr - concatenates all the arguments of the program
+ * strtow - concatenates all the arguments of the program
  * @ac: grid of the 2D array
  * @av: height of the 2D array
  * Return: pointer to a new string or NULL
  */
-char *argstostr(int ac, char **av)
+char **strtow(char *str)
 {
 	if (ac == 0 || av == NULL)
 		return (NULL);
