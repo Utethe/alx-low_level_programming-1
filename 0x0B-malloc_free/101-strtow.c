@@ -3,36 +3,74 @@
 #include <stdio.h>
 
 /**
- * strtow - concatenates all the arguments of the program
- * @ac: grid of the 2D array
- * @av: height of the 2D array
- * Return: pointer to a new string or NULL
+ * count_words - count the number of words in a string
+ * @str: string to count
+ * Return: number of words in a string
+ */
+int count_words(char *str)
+{
+	int w = 0, i = 0, s = 1;
+
+	for (i = 0; str[i] != '\0'; i++)
+	{
+		if (str[i] == 32 && s == 0)
+		{
+			s = 1;
+		}
+		else if (str[i] != 32 && s == 1)
+		{
+			s = 0;
+			w++;
+		}
+	}
+	return (w);
+}
+
+
+/**
+ * **strtow - splits a string into words
+ * @str: string to split
+ * Return: pointer to an array of strings (Success)
+ * or NULL (Error)
  */
 char **strtow(char *str)
 {
-	if (ac == 0 || av == NULL)
-		return (NULL);
-	char *str;
-	int k, tsz, i, j;
+	char **matrix, *tmp;
+	int i, k = 0, len = 0, words, c = 0, start, end;
 
-	tsz = 0;
-	for (k = 0; k < ac; k++)
-	{
-		tsz = tsz + strlen(av[k]) + 1;
-	}
-	str = malloc((tsz + 1) * sizeof(char));
-	if (str == NULL)
+	while (*(str + len))
+		len++;
+	words = count_words(str);
+	if (words == 0)
 		return (NULL);
-	j = 0;
-	for (k = 0; k < ac; k++)
+
+	matrix = (char **) malloc(sizeof(char *) * (words + 1));
+	if (matrix == NULL)
+		return (NULL);
+
+	for (i = 0; i <= len; i++)
 	{
-		for (i = 0; av[k][i] != '\0'; i++)
+		if (str[i] == ' ' || str[i] == '\0')
 		{
-			str[j] = av[k][i];
-			j++;
+			if (c)
+			{
+				end = i;
+				tmp = (char *) malloc(sizeof(char) * (c + 1));
+				if (tmp == NULL)
+					return (NULL);
+				while (start < end)
+					*tmp++ = str[start++];
+				*tmp = '\0';
+				matrix[k] = tmp - c;
+				k++;
+				c = 0;
+			}
 		}
-		str[j] = '\n';
-		j++;
+		else if (c++ == 0)
+			start = i;
 	}
-	return (str);
+
+	matrix[k] = NULL;
+
+	return (matrix);
 }
