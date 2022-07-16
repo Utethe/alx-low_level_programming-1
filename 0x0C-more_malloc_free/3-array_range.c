@@ -1,12 +1,12 @@
 #include <stdlib.h>
 
 /**
- * _calloc - allocates memory for an array using malloc
- * @nmemb: length of the array
- * @size: size of each element of the array
+ * array_range - allocates memory for an array using malloc
+ * @min: length of the array
+ * @max: size of each element of the array
  * Return: a pointer to the allocated memory or NULL otherwise
  */
-void *_calloc(unsigned int nmemb, unsigned int size)
+int *array_range(int min, int max)
 {
 	char *ptr;
 	unsigned int f;
@@ -17,7 +17,7 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 	if (ptr == NULL)
 		return (NULL);
 	f = 0;
-	while (f < (nmemb * size))
+	while (f < nmemb)
 	{
 		ptr[f] = 0;
 		f++;
