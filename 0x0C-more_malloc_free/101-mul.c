@@ -7,7 +7,7 @@
 /**
  * error - prints error and exit with 98
  */
-void error()
+void error(void)
 {
 	printf("Error\n");
 	exit(98);
@@ -16,7 +16,7 @@ void error()
 /**
  * _isdigit - checks if a character is a digit
  * @s: string of character to check
- * Return: 0 if is alpha, 1 if it is digit 
+ * Return: 0 if is alpha, 1 if it is digit
  */
 int _isdigit(char *s)
 {
@@ -72,9 +72,7 @@ int main(int argc, char **argv)
 		if (res[i])
 			v = 1;
 		if (v)
-		{
 			_putchar(res[i] + '0');
-		}
 	}
 	if (!v)
 		_putchar('0');
@@ -82,4 +80,3 @@ int main(int argc, char **argv)
 	free(res);
 	return (0);
 }
-		
