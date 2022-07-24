@@ -31,6 +31,6 @@ int main(int argc, char **argv)
 		exit(100);
 	}
 	val = func(n1, n2);
-	printf("val: %d\n", val);
+	printf("%d\n", val);
 	return (0);
 }
