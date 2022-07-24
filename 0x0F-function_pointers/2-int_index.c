@@ -9,6 +9,8 @@ int int_index(int *array, int size, int (*cmp)(int))
 {
 	int o;
 
+	if (!array || !cmp)
+		return;
 	if (size <= 0)
 		return (-1);
 	for (o = 0; o < size; o++)
