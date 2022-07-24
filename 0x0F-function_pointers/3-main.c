@@ -2,7 +2,7 @@
 #include <stdio.h>
 #include "function_pointers.h"
 /**
- * int_index - searches for an integer using a function
+ * main - searches for an integer using a function
  * @argc: size of the input array
  * @argv: input array
  * Return: 0

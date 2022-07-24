@@ -27,5 +27,6 @@ int (*get_op_func(char *s))(int, int)
 		}
 		i++;
 	}
+	printf("%d\n", i);
 	return (ops[i - 1].f);
 }
