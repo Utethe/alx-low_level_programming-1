@@ -4,9 +4,9 @@
  * main - prints the opcodes of its own main function
  * @argc: size of array argv
  * @argv: array of inputs
- * Return: 0 
+ * Return: 0
  */
-int main (int argc, char **argv)
+int main(int argc, char **argv)
 {
 	int nb, l;
 	char *bytes;
