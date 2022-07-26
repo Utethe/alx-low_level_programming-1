@@ -1,0 +1,32 @@
+#include <stdio.h>
+#include <stdlib.h>
+/**
+ * main - prints the opcodes of its own main function
+ * @argc: size of array argv
+ * @argv: array of inputs
+ * Return: 0 
+ */
+int main (int argc, char **argv)
+{
+	int nb, l;
+	char *bytes;
+
+	if (argc != 2)
+	{
+		printf("Error\n");
+		exit(1);
+	}
+	nb = atoi(argv[1]);
+	if (nb < 0)
+	{
+		printf("Error\n");
+		exit(2);
+	}
+	bytes = (char *)main;
+	for (l = 0; l < nb; l++)
+	{
+		printf("%02hhx ", bytes[l]);
+	}
+	printf("\n");
+	return (0);
+}
