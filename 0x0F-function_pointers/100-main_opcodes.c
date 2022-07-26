@@ -25,8 +25,12 @@ int main(int argc, char **argv)
 	bytes = (char *)main;
 	for (l = 0; l < nb; l++)
 	{
+		if (l == nb - 1)
+		{
+			printf("%02hhx\n", bytes[l]);
+			break;
+		}
 		printf("%02hhx ", bytes[l]);
 	}
-	printf("\n");
 	return (0);
 }
