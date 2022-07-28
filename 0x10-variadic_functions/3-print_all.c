@@ -12,9 +12,12 @@ void print_all(const char * const format, ...)
 
 	va_list ls;
 
-	va_start(ls, format);
 	if (!format)
+	{
+		printf("\n");
 		return;
+	}
+	va_start(ls, format);
 	while (format[j])
 	{
 		switch (format[j])
