@@ -8,9 +8,10 @@
  */
 unsigned int binary_to_uint(const char *b)
 {
-	int w, t, p = 0;
-	unsigned int res = 0;
+	int w, t, p;
+	unsigned int res;
 
+	res = 0;
 	if (!b)
 		return (0);
 	for (t = 0; b[t] != '\0'; t++)
@@ -20,6 +21,7 @@ unsigned int binary_to_uint(const char *b)
 		if (b[t] == '1')
 			break;
 	}
+	p = 0;
 	for (w = strlen(b) - 1; w >= t; w--)
 	{
 		if (b[w] != '0' && b[w] != '1')
