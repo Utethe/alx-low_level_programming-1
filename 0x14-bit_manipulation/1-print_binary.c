@@ -6,13 +6,23 @@
  */
 void print_binary(unsigned long int n)
 {
-	unsigned int w, rm = 0;
+	int w = 63, ck = 0;
+	unsigned long int rm;
 
-	while (w != 0)
+	while (w >= 0)
 	{
-		w = n >> 1;
-		rm = n - (w << 1);
-		n = w;
-		_putchar(rm + '0');
+		rm = n >> w;
+		if (rm & 1)
+		{
+			ck = 1;
+			_putchar('1');
+		}
+		else if (ck == 1)
+		{
+			_putchar('0');
+		}
+		w--;
 	}
+	if (!ck)
+		_putchar('0');
 }
