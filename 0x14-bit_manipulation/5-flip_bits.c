@@ -1,5 +1,4 @@
 #include "main.h"
-#include <stdio.h>
 /**
  * flip_bits - get the number of bits to flip to get
  * @n: number to flip
