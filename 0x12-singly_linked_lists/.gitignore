@@ -11,4 +11,5 @@
 # ignore specific files
 _putchar.c
 main.c
+101-hello_holberton.c
 learn*
